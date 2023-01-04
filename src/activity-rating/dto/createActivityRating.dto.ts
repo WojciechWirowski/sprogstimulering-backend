@@ -2,7 +2,7 @@ import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateActivityRatingDto {
   @ApiProperty()
-  activityId: number;
+  id: number;
 
   @ApiProperty()
   value1: number;

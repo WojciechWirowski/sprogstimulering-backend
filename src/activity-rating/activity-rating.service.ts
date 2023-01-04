@@ -14,10 +14,10 @@ export class ActivityRatingService {
     private activityRepository: Repository<Activity>,
   ) {}
 
-  async create(createActivityRatingDto: CreateActivityRatingDto) {
+    async create(createActivityRatingDto: CreateActivityRatingDto) {
     try {
       const activity = await this.activityRepository.findOne({
-        where: { id: createActivityRatingDto.activityId },
+        where: { id: createActivityRatingDto.id },
       });
       return this.activityRatingRepository.save({
         activity: activity,

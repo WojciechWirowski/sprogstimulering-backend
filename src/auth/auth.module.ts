@@ -4,12 +4,11 @@ import {UsersModule} from "../users/users.module";
 import {PassportModule} from "@nestjs/passport";
 import {LocalStrategy} from "./local.strategy";
 import {JwtModule} from "@nestjs/jwt";
-import * as process from "process";
 import {JwtStrategy} from "./jwt.strategy";
 
 @Module({
   imports: [UsersModule, PassportModule, JwtModule.register({
-    secret: process.env.JWT_SECRET,
+    secret: "U634iP5ogPy%U1UeFHUj5$cb%YrLm$FexzhEpVxQ8hX8zvnL",
     signOptions: {expiresIn: '300s'}
   })],
   providers: [AuthService, LocalStrategy, JwtStrategy],

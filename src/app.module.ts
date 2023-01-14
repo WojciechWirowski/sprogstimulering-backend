@@ -6,7 +6,9 @@ import { ActivityModule } from './activity/activity.module';
 import { ActivityRatingModule } from './activity-rating/activity-rating.module';
 import { CategoryModule } from './category/category.module';
 import { AuthModule } from './auth/auth.module';
-import { ConfigModule, ConfigService } from '@nestjs/config';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 @Module({
   imports: [

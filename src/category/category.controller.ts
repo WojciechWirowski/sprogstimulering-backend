@@ -1,6 +1,7 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { CategoryService } from './category.service';
 import { CreateCategoryDto } from './dto/createCategory.dto';
+import { UpdateCategoryDto } from "./dto/updateCategoryDto";
 
 @Controller('category')
 export class CategoryController {
@@ -9,6 +10,10 @@ export class CategoryController {
   @Post('/create')
   create(@Body() createCategoryDto: CreateCategoryDto) {
     return this.categoryService.create(createCategoryDto);
+  }
+  @Post('/update')
+  update(@Body() updateCategoryDto: UpdateCategoryDto) {
+    return this.categoryService.update(updateCategoryDto);
   }
 
   @Get()
